@@ -6,7 +6,11 @@
   </head>
   <body>
     <header class="page-header">
-      <img src="#" alt="Pink" class="page-header__logo">
+     <div class="page-header__logo">
+        <a href="index.html">
+          <img src="#" alt="Pink">
+        </a>
+      </div>
       <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
       <nav class="page-header__menu page-header__menu--opened">
         <ul class="page-header__menu-list">
@@ -14,10 +18,10 @@
             <a href="index.html">Главная</a>
           </li>
           <li class="page-header__menu-item">
-            <a>Фотографии</a>
+            <a href="photo.html">Фотографии</a>
           </li>
           <li class="page-header__menu-item">
-            <a href="form.html">Конкурс</a>
+            Конкурс
           </li>
           <li class="page-header__menu-item">
             <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
@@ -26,7 +30,7 @@
       </nav>
     </header>
     <main class="main-content">
-      <div class="main-content_intro">
+      <div class="main-content__intro">
         <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
       <section class="contest">
@@ -84,23 +88,25 @@
       </section>
     </main>
     <footer class="page-footer">
-      <img src="#" alt="PINK" class="page-footer__logo">
+      <a href="index.html" class="page-footer__logo">
+        <img src="#" alt="PINK">
+      </a>
       <section class="page-footer__socials">
-        <ul class="page-footer_socials-list">
-          <li class="page-footer_social page-footer_social--twitter">
+        <ul class="page-footer__socials-list">
+          <li class="page-footer__social page-footer__social--twitter">
             <a href="https://twitter.com/htmlacademy_ru">Twitter</a>
           </li>
-          <li class="page-footer_social page-footer_social--facebook">
+          <li class="page-footer__social page-footer__social--facebook">
             <a href="https://facebook.com/htmlacademy/">Facebook</a>
           </li>
-          <li class="page-footer_social page-footer_social--youtube">
+          <li class="page-footer__social page-footer__social--youtube">
             <a href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
           </li>
         </ul>
       </section>
-      <div class="page-footer__developed">
+      <a href="https://htmlacademy.ru" target="_blank" class="page-footer__developed">
         Разработано <img src="#" alt="Html Academy">
-      </div>
+      </a>
     </footer>
   </body>
 </html>
