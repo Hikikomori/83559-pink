@@ -2,11 +2,186 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <title>PINK</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <header class="page-header">
+      <div class="page-header__logo">
+        <img src="#" alt="Pink">
+      </div>
+      <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
+      <nav class="page-header__menu page-header__menu--opened">
+        <ul class="page-header__menu-list">
+          <li class="page-header__menu-item">
+            Главная
+          </li>
+          <li class="page-header__menu-item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="page-header__menu-item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="page-header__menu-item">
+            <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="main-content__intro main-content__intro--index"></div>
+
+      <section class="download-app">
+        <a class="download-app__main-link" href="https://itunes.apple.com/ru/genre/ios/id36">Скачать приложение</a>
+        <ul class="download-app__markets-list">
+          <li class="download-app__market download-app__market--apple">
+            <a href="https://itunes.apple.com/ru/genre/ios/id36">
+              <img src="#" alt="App Store">
+            </a>
+          </li>
+          <li class="download-app__market download-app__market--google">
+            <a href="https://play.google.com/store/apps">
+              <img src="#" alt="Google Play">
+            </a>
+          </li>
+          <li class="download-app__market download-app__market--microsoft">
+            <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+              <img src="#" alt="Windows Store">
+            </a>
+          </li>
+        </ul>
+        <p class="download-app__availability">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </section>
+
+      <section class="about-app">
+        <header class="about-app__header">
+          <p>Устали от серости мегаполиса?</p>
+          <p>Нам есть, что вам предложить!</p>
+        </header>
+        <section class="about-app__feature">
+          <h2>Поднимает настроение</h2>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        </section>
+        <section class="about-app__feature">
+          <h2>Меняет мир вокруг</h2>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </section>
+        <section class="about-app__feature">
+          <h2>Заводит новых друзей</h2>
+          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+        </section>
+        <footer class="about-app__footer"></footer>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__list">
+          <article class="reviews__item">
+            <div class="reviews__author">Николай Петров</div>
+            <p class="reviews__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+          <article class="reviews__item">
+            <div class="reviews__author">Николай Петров</div>
+            <p class="reviews__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+          <article class="reviews__item">
+            <div class="reviews__author">Николай Петров</div>
+            <p class="reviews__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </article>
+        </div>
+        <div class="item__selector">
+          <button class="item__select item__select--active"></button>
+          <button class="item__select"></button>
+          <button class="item__select"></button>
+        </div>
+      </section>
+
+      <section class="price">
+        <section class="price__item">
+          <header class="price__header">
+            <div class="price__name">Базовый</div>
+            <div class="price__cost">1,99 USD</div>
+          </header>
+          <ul class="price__feature-list">
+            <li class="price__feature price__feature--yes">
+              Розовый фильтр
+            </li>
+            <li class="price__feature price__feature--no">
+              Смайлики
+            </li>
+            <li class="price__feature price__feature--no">
+              Комментарии
+            </li>
+          </ul>
+        </section>
+        <section class="price__item price__item--hit">
+          <header class="price__header">
+            <div class="price__name">Стандарт</div>
+            <div class="price__cost">3,99 USD</div>
+          </header>
+          <ul class="price__feature-list">
+            <li class="price__feature price__feature--yes">
+              Розовый фильтр
+            </li>
+            <li class="price__feature price__feature--yes">
+              Смайлики
+            </li>
+            <li class="price__feature price__feature--no">
+              Комментарии
+            </li>
+          </ul>
+        </section>
+        <section class="price__item">
+          <header class="price__header">
+            <div class="price__name">Безлимит</div>
+            <div class="price__cost">6,99 USD</div>
+          </header>
+          <ul class="price__feature-list">
+            <li class="price__feature price__feature--yes">
+              Розовый фильтр
+            </li>
+            <li class="price__feature price__feature--yes">
+              Смайлики
+            </li>
+            <li class="price__feature price__feature--yes">
+              Комментарии
+            </li>
+          </ul>
+        </section>
+        <div class="item__selector">
+          <button class="item__select"></button>
+          <button class="item__select item__select--active"></button>
+          <button class="item__select"></button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <p class="page-footer__header">
+        Остались вопросы?<br>
+        Свяжитесь с нами!
+      </p>
+      <section class="page-footer__contacts">
+        <ul class="page-footer__contacts-list">
+          <li class="page-footer__contact">
+            <div>Звоните:</div>
+            <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </li>
+          <li class="page-footer__contact">
+            <div>Пишите:</div>
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+          <li class="page-footer__contact">
+            <div>Приезжайте в гости:</div>
+            ул. Большая Конюшенная, 19/8
+          </li>
+        </ul>
+      </section>
+      <div class="page-footer__map"></div>
+    </footer>
 
   </body>
 </html>
