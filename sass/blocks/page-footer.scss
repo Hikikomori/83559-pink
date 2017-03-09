@@ -1,0 +1,68 @@
+.page-footer {
+  padding: 40px 20px;
+  text-align: center;
+
+  &--index {
+    padding: 0 20px;
+  }
+}
+
+.page-footer__header {
+  @include opensans(300,24px,30px);
+}
+
+.page-footer__contacts-list {
+  @include no-list-mark;
+  @include no-indents;
+}
+
+.page-footer__contact {
+  @include opensans(300,24px,30px)
+  color: $pink;
+  margin-bottom: 25px;
+}
+
+.page-footer__contact-heading {
+  @include opensans(700,18px,22px)
+  color: $darkblue;
+}
+
+.page-footer__contact-link {
+  color: $pink;
+  text-decoration: none;
+}
+
+.page-footer__socials-list {
+  @include no-list-mark;
+}
+
+.page-footer__social {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+  display: block;
+  height: 44px;
+  width: 44px;
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}
+.page-footer__social-placeholder {
+  visibility: hidden;
+}
+
+.page-footer__developed {
+  @include opensans(400,14px,18px);
+  color: $darkblue;
+  text-decoration: none;
+}

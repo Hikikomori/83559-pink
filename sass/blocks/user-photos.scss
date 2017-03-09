@@ -1,0 +1,14 @@
+.user-photos {
+  margin-bottom: -20px;
+}
+
+.user-photos__header {
+  padding: 47px 20px;
+  text-align: center;
+}
+
+.user-photos__header-text {
+  @include opensans(400,14px,30px);
+  margin: 0;
+  padding: 0 15px;
+}

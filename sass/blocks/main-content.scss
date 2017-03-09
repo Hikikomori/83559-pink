@@ -1,0 +1,20 @@
+.main-content {
+  margin-top: -65px;
+}
+
+.main-content__intro {
+  background: #2a3a4a url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
+  min-height: 237px;
+  text-align: center;
+
+  &--index {
+    height: 462px;
+  }
+}
+
+.main-content__intro-heading {
+  @include opensans(300,24px,30px);
+  color: #fff;
+  margin: 0;
+  padding: 100px 20px 0 20px;
+}

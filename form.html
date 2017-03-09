@@ -3,39 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>Конкурс от PINK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
-  <body>
+  <body class="page">
     <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="#" alt="Pink">
-        </a>
-      </div>
-      <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
       <nav class="page-header__menu page-header__menu--opened">
+        <div class="page-header__menu-top-row">
+          <div class="page-header__menu-logo">
+            <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+          </div>
+          <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
+        </div>
         <ul class="page-header__menu-list">
           <li class="page-header__menu-item">
-            <a href="index.html">Главная</a>
+            <a class="page-header__menu-item-link" href="index.html">Главная</a>
           </li>
           <li class="page-header__menu-item">
-            <a href="photo.html">Фотографии</a>
+            <a class="page-header__menu-item-link" href="photo.html">Фотографии</a>
           </li>
           <li class="page-header__menu-item">
             Конкурс
           </li>
           <li class="page-header__menu-item">
-            <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+            <a class="page-header__menu-item-link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-content">
       <div class="main-content__intro">
-        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="main-content__intro-heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
       </div>
       <section class="contest">
         <header class="contest__header">
-          <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
+          <p class="contest__header-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
         </header>
         <form action="https://echo.htmlacademy.ru" class="contest__form" method="POST">
           <fieldset class="contest__fieldset">
@@ -47,7 +48,7 @@
             <input type="text" class="contest__input-text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
           </fieldset>
           <fieldset class="contest__fieldset contest__fieldset--dark">
-            <legend>Ваши безбашенные достижения в путешествии</legend>
+            <p class="contest__fieldset-heading">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</p>
             <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check1" value="shark" checked="checked">
             <label for="check1" class="contest__label-checkbox">Сделал селфи с акулой</label>
             <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check2" value="burned" checked="checked">
@@ -68,7 +69,7 @@
             <input type="email" class="contest__input-text" name="email" id="email" required="required" placeholder="Введите почту *">
           </fieldset>
           <fieldset class="contest__fieldset contest__fieldset--dark">
-            <legend>С каким приложением путешествовали?</legend>
+            <p class="contest__fieldset-heading">С каким приложением путешествовали?</p>
             <input type="radio" name="app-platform" id="radio1" value="iOS" checked="checked">
             <label for="radio1">Pink для iOS</label>
             <input type="radio" name="app-platform" id="radio2" value="Android">
@@ -77,10 +78,12 @@
             <label for="radio3">Windows Phone</label>
           </fieldset>
           <fieldset class="contest__fieldset">
-            <legend>Опишите свои эмоции</legend>
-            <textarea rows="10" cols="45" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <p class="contest__fieldset-heading">Опишите свои эмоции</p>
+            <textarea rows="10" cols="32" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
-          <button type="submit">Отправить форму</button>
+          <div class="contest__form-submit">
+            <button type="submit" class="contest__form-submit-button">Отправить форму</button>
+          </div>
         </form>
         <div class="contest__form-hint">
           <span class="contest__form-hint-symbol">*</span> — обязательные поля
@@ -89,23 +92,26 @@
     </main>
     <footer class="page-footer">
       <a href="index.html" class="page-footer__logo">
-        <img src="#" alt="PINK">
+        <img src="img/logo-pink-blue-mobile.svg" alt="PINK">
       </a>
       <section class="page-footer__socials">
         <ul class="page-footer__socials-list">
-          <li class="page-footer__social page-footer__social--twitter">
-            <a href="https://twitter.com/htmlacademy_ru">Twitter</a>
+          <li>
+            <a href="https://twitter.com/htmlacademy_ru" class="page-footer__social page-footer__social--twitter">
+              <span class="page-footer__social-placeholder">Twitter</span></a>
           </li>
-          <li class="page-footer__social page-footer__social--facebook">
-            <a href="https://facebook.com/htmlacademy/">Facebook</a>
+          <li>
+            <a href="https://facebook.com/htmlacademy/" class="page-footer__social page-footer__social--facebook">
+              <span class="page-footer__social-placeholder">Facebook</span></a>
           </li>
-          <li class="page-footer__social page-footer__social--youtube">
-            <a href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
+          <li>
+            <a href="https://www.youtube.com/user/htmlacademyru" class="page-footer__social page-footer__social--youtube">
+              <span class="page-footer__social-placeholder">YouTube</span></a>
           </li>
         </ul>
       </section>
       <a href="https://htmlacademy.ru" target="_blank" class="page-footer__developed">
-        Разработано <img src="#" alt="Html Academy">
+        Разработано <img src="img/logo-htmlacademy.svg" alt="Html Academy">
       </a>
     </footer>
   </body>

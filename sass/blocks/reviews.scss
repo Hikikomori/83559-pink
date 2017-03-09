@@ -1,0 +1,17 @@
+.reviews__item {
+  display: none;
+  padding: 0 20px;
+  text-align: center;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.reviews__author {
+  @include opensans(700,18px,30px);
+}
+
+.reviews__content {
+  @include opensans(400,14px,30px);
+}

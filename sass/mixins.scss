@@ -1,0 +1,17 @@
+@mixin opensans($weight, $size, $height) {
+  font: {
+    family: "Open Sans";
+    size: $size;
+    weight: $weight;
+  }
+  line-height: $height;
+}
+
+@mixin no-indents {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin no-list-mark {
+  list-style-type: none;
+}

@@ -1,0 +1,61 @@
+.download-app {
+  background-color: #1d2631;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.download-app__main-link {
+  @include opensans(700,18px,18px);
+  border: 3px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  padding: 16px 25px;
+
+  &:hover {
+    background-color: #fff;
+    color: $pink;
+  }
+
+  &:active {
+    color: opacify($pink, 0.3);
+  }
+}
+
+.download-app__markets-list {
+  @include no-list-mark;
+}
+
+.download-app__market-link {
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+}
+
+.download-app__market--apple .download-app__market-link{
+  background-image: url("../img/logo-apple.svg");
+  height: 57px;
+  width: 47px;
+}
+
+.download-app__market--google .download-app__market-link{
+  background-image: url("../img/logo-android.svg");
+  height: 48px;
+  width: 43px;
+}
+
+.download-app__market--microsoft .download-app__market-link{
+  background-image: url("../img/logo-microsoft.svg");
+  height: 42px;
+  width: 44px;
+}
+
+.download-app__market-link-placeholder {
+  visibility: hidden;
+}
+
+.download-app__availability {
+  @include opensans(400,14px,24px);
+  color: #fff;
+}
