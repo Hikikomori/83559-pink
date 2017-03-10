@@ -3,27 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>PINK</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
-  <body>
+  <body class="page">
 
     <header class="page-header">
-      <div class="page-header__logo">
-        <img src="#" alt="Pink">
-      </div>
-      <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
       <nav class="page-header__menu page-header__menu--opened">
+        <div class="page-header__menu-top-row">
+          <div class="page-header__menu-logo">
+            <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+          </div>
+          <button class="page-header__menu-button page-header__menu-button--close-menu"></button>
+        </div>
         <ul class="page-header__menu-list">
           <li class="page-header__menu-item">
             Главная
           </li>
           <li class="page-header__menu-item">
-            <a href="photo.html">Фотографии</a>
+            <a class="page-header__menu-item-link" href="photo.html">Фотографии</a>
           </li>
           <li class="page-header__menu-item">
-            <a href="form.html">Конкурс</a>
+            <a class="page-header__menu-item-link" href="form.html">Конкурс</a>
           </li>
           <li class="page-header__menu-item">
-            <a href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
+            <a class="page-header__menu-item-link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -33,21 +36,21 @@
       <div class="main-content__intro main-content__intro--index"></div>
 
       <section class="download-app">
-        <a class="download-app__main-link" href="https://itunes.apple.com/ru/genre/ios/id36">Скачать приложение</a>
+        <a class="download-app__main-link" href="https://itunes.apple.com/ru/genre/ios/id36" target="_blank">Скачать приложение</a>
         <ul class="download-app__markets-list">
           <li class="download-app__market download-app__market--apple">
-            <a href="https://itunes.apple.com/ru/genre/ios/id36">
-              <img src="#" alt="App Store">
+            <a class="download-app__market-link" href="https://itunes.apple.com/ru/genre/ios/id36" target="_blank">
+              <span class="download-app__market-link-placeholder">App Store</span>
             </a>
           </li>
           <li class="download-app__market download-app__market--google">
-            <a href="https://play.google.com/store/apps">
-              <img src="#" alt="Google Play">
+            <a class="download-app__market-link" href="https://play.google.com/store/apps" target="_blank">
+              <span class="download-app__market-link-placeholder">Google Play</span>
             </a>
           </li>
           <li class="download-app__market download-app__market--microsoft">
-            <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
-              <img src="#" alt="Windows Store">
+            <a class="download-app__market-link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone" target="_blank">
+              <span class="download-app__market-link-placeholder">Windows Store</span>
             </a>
           </li>
         </ul>
@@ -58,27 +61,27 @@
 
       <section class="about-app">
         <header class="about-app__header">
-          <p>Устали от серости мегаполиса?</p>
-          <p>Нам есть, что вам предложить!</p>
+          <p class="about-app__header-text">Устали от серости мегаполиса?</p>
+          <p class="about-app__header-text">Нам есть, что вам предложить!</p>
         </header>
         <section class="about-app__feature">
-          <h2>Поднимает настроение</h2>
-          <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          <h2 class="about-app__feature-heading">Поднимает настроение</h2>
+          <p class="about-app__feature-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
         </section>
         <section class="about-app__feature">
-          <h2>Меняет мир вокруг</h2>
-          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <h2 class="about-app__feature-heading">Меняет мир вокруг</h2>
+          <p class="about-app__feature-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </section>
         <section class="about-app__feature">
-          <h2>Заводит новых друзей</h2>
-          <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          <h2 class="about-app__feature-heading">Заводит новых друзей</h2>
+          <p class="about-app__feature-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
         </section>
         <footer class="about-app__footer"></footer>
       </section>
 
       <section class="reviews">
         <div class="reviews__list">
-          <article class="reviews__item">
+          <article class="reviews__item reviews__item--visible">
             <div class="reviews__author">Николай Петров</div>
             <p class="reviews__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
@@ -91,10 +94,10 @@
             <p class="reviews__content">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </article>
         </div>
-        <div class="item__selector">
-          <button class="item__select item__select--active"></button>
-          <button class="item__select"></button>
-          <button class="item__select"></button>
+        <div class="reviews__item-selector">
+          <button class="reviews__item-select reviews__item-select--active"></button>
+          <button class="reviews__item-select"></button>
+          <button class="reviews__item-select"></button>
         </div>
       </section>
 
@@ -150,16 +153,16 @@
             </li>
           </ul>
         </section>
-        <div class="item__selector">
-          <button class="item__select"></button>
-          <button class="item__select item__select--active"></button>
-          <button class="item__select"></button>
+        <div class="price__item-selector">
+          <button class="price__item-select"></button>
+          <button class="price__item-select price__item-select--active"></button>
+          <button class="price__item-select"></button>
         </div>
       </section>
 
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--index">
       <p class="page-footer__header">
         Остались вопросы?<br>
         Свяжитесь с нами!
@@ -167,15 +170,15 @@
       <section class="page-footer__contacts">
         <ul class="page-footer__contacts-list">
           <li class="page-footer__contact">
-            <div>Звоните:</div>
-            <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <div class="page-footer__contact-heading">Звоните:</div>
+            <a class="page-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
           <li class="page-footer__contact">
-            <div>Пишите:</div>
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <div class="page-footer__contact-heading">Пишите:</div>
+            <a class="page-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
           <li class="page-footer__contact">
-            <div>Приезжайте в гости:</div>
+            <div class="page-footer__contact-heading">Приезжайте в гости:</div>
             ул. Большая Конюшенная, 19/8
           </li>
         </ul>

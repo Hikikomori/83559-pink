@@ -1,0 +1,75 @@
+.contest__header {
+  padding: 50px 20px 40px 20px;
+  text-align: center;
+}
+
+.contest__header-text {
+  @include opensans(400,14px,30px);
+  margin: 0;
+}
+
+.contest__fieldset {
+  border: none;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.contest__fieldset--dark {
+  background-color: $gray;
+}
+
+.contest__fieldset-heading {
+  @include opensans(400,14px,18px);
+  color: $pink;
+  margin: 0 0 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contest__label-text {
+  @include opensans(400,14px,30px);
+  color: $pink;
+  display: block;
+  margin-left: 23px;
+  text-transform: uppercase;
+}
+
+.contest__input-text {
+  border: 2px solid #e5e5e5;
+  color:$darkblue;
+  height: 60px;
+  line-height: 60px;
+  min-width: 236px;
+  padding: 0 20px;
+
+  &::placeholder {
+    @include opensans(400,18px,60px);
+    color:$darkblue;
+    opacity: 1;
+  }
+}
+
+.contest__form-submit {
+  padding: 0 20px 40px 20px;
+}
+
+.contest__form-submit-button {
+  @include opensans(700,18px,63px);
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.contest__form-hint {
+  @include opensans(400,14px,30px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contest__form-hint-symbol {
+  color: $pink;
+}

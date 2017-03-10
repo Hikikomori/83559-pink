@@ -1,0 +1,23 @@
+.about-app {
+  background-color: $gray;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-app__header {
+  background-color: #fff;
+  margin: 0 -20px;
+}
+
+.about-app__header-text {
+  @include opensans(300,24px,30px);
+  color: $darkblue;
+}
+
+.about-app__feature-heading {
+  @include opensans(700,18px,24px);
+}
+
+.about-app__feature-text {
+  @include opensans(400,14px,24px);
+}
