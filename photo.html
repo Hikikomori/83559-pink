@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Фотографии пользователей PINK</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
@@ -32,110 +33,147 @@
     </header>
     <main class="main-content">
       <div class="main-content__intro">
-        <h1 class="main-content__intro-heading">Фотографии пользователей</h1>
+        <h1 class="main-content__intro-heading">Фотографии<br>пользователей</h1>
       </div>
       <section class="user-photos">
         <header class="user-photos__header">
           <p class="user-photos__header-text">Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хватает ваших?</p>
+          Видите,&nbsp;как&nbsp;не&nbsp;хватает&nbsp;ваших?</p>
         </header>
-        <article class="user-post">
-          <a href="#"><img src="../img/panorama-mobile@1x.jpg" alt="Мост" class="user-post__photo user-post__photo--panorama user-post__photo--panorama-of-the-day"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Анна</div>
-            <time datetime="2016-06-15T17:48" class="user-post__created">(5 минут назад)</time>
-            <p class="user-post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">215</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-1-mobile@1x.jpg" alt="Автомобиль" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Левон</div>
-            <time datetime="2016-06-15T12:53" class="user-post__created">(5 часов назад)</time>
-            <p class="user-post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">356</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-2-mobile@1x.jpg" alt="Барабанная установка" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Антон</div>
-            <time datetime="2016-06-15T05:53" class="user-post__created">(12 часов назад)</time>
-            <p class="user-post__content">Соседи будут рады!</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">666</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-3-mobile@1x.jpg" alt="Вид из окна" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Борис</div>
-            <time datetime="2016-06-14T21:53" class="user-post__created">(20 часов назад)</time>
-            <p class="user-post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">215</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-4-mobile@1x.jpg" alt="Кубанская бахча" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Сергей</div>
-            <time datetime="2016-06-14T16:53" class="user-post__created">(25 часов назад)</time>
-            <p class="user-post__content">Самая кубанская в мире!</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">4</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-5-mobile@1x.jpg" alt="Горы" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Максим</div>
-            <time datetime="2016-06-14T01:53" class="user-post__created">(40 часов назад)</time>
-            <p class="user-post__content">Где снег-то?</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">150</span></div>
-          </div>
-        </article>
-        <article class="user-post">
-          <a href="#"><img src="../img/photo-6-mobile@1x.jpg" alt="Вид из иллюминатора" class="user-post__photo"></a>
-          <div class="user-post__desc">
-            <div class="user-post__author">Надежда</div>
-            <time datetime="2016-06-13T20:53" class="user-post__created">(45 часов назад)</time>
-            <p class="user-post__content">Всем GM и взаимные лайки!</p>
-            <button class="user-post__like-button"></button>
-            <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">2560</span></div>
-          </div>
-        </article>
+        <div class="user-photos__content">
+          <article class="user-post user-post--panorama">
+            <a href="#"><img src="../img/panorama-mobile@1x.jpg" alt="Мост" class="user-post__photo user-post__photo--panorama user-post__photo--panorama-of-the-day"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Анна</div>
+                <time datetime="2016-06-15T17:48" class="user-post__created">(5 минут назад)</time>
+              </div>
+              <p class="user-post__content">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">215</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-1-mobile@1x.jpg" alt="Автомобиль" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Левон</div>
+                <time datetime="2016-06-15T12:53" class="user-post__created">(5 часов назад)</time>
+              </div>
+              <p class="user-post__content">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">356</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-2-mobile@1x.jpg" alt="Барабанная установка" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Антон</div>
+                <time datetime="2016-06-15T05:53" class="user-post__created">(12 часов назад)</time>
+              </div>
+              <p class="user-post__content">Соседи будут рады!</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">666</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-3-mobile@1x.jpg" alt="Вид из окна" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Борис</div>
+                <time datetime="2016-06-14T21:53" class="user-post__created">(20 часов назад)</time>
+              </div>
+              <p class="user-post__content">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">215</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-4-mobile@1x.jpg" alt="Кубанская бахча" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Сергей</div>
+                <time datetime="2016-06-14T16:53" class="user-post__created">(25 часов назад)</time>
+              </div>
+              <p class="user-post__content">Самая кубанская в мире!</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">4</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-5-mobile@1x.jpg" alt="Горы" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Максим</div>
+                <time datetime="2016-06-14T01:53" class="user-post__created">(40 часов назад)</time>
+              </div>
+              <p class="user-post__content">Где снег-то?</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">150</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="user-post">
+            <a href="#"><img src="img/photo-6-mobile@1x.jpg" alt="Вид из иллюминатора" class="user-post__photo"></a>
+            <div class="user-post__desc">
+              <div class="user-post__info">
+                <div class="user-post__author">Надежда</div>
+                <time datetime="2016-06-13T20:53" class="user-post__created">(45 часов назад)</time>
+              </div>
+              <p class="user-post__content">Всем GM и взаимные лайки!</p>
+              <div class="user-post__likes-wrap">
+                <button class="user-post__like-button"></button>
+                <div class="user-post__likes">Нравится: <span class="user-post__likes-amount">2560</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="create-post">
         <header class="create-post__header">
-          <p class="create-post__header-text">Затмите их всех!
+          <p class="create-post__header-text">Затмите их всех!<br>
           Выкладывайте&nbsp;все,&nbsp;что&nbsp;накопилось в телефоне!</p>
         </header>
-        <img src="../img/photo-7-mobile@1x.jpg" alt="Зимняя дорога" class="create-post__photo">
-        <form action="https://echo.htmlacademy.ru" class="create-post__form">
-          <div class="create-post__filters">
-            <ul class="create-post__filters-list">
-              <li>
-                <button type="button" class="create-post__filter create-post__filter--crop"></button>
-              </li>
-              <li>
-                <button type="button" class="create-post__filter create-post__filter--fill"></button>
-              </li>
-              <li>
-                <button type="button" class="create-post__filter create-post__filter--contrast"></button>
-              </li>
-            </ul>
-            <input type="range" class="create-post__filter-intensity">
+        <div class="create-post__main">
+          <div class="create-post__photo-wrap">
+            <img src="img/photo-7-mobile@1x.jpg" alt="Зимняя дорога" class="create-post__photo">
           </div>
-          <div class="create-post__form-actions">
-            <button class="create-post__form-action-button" type="submit">Запостить</button>
-            <button class="create-post__form-action-button create-post__form-action-button--reset" type="reset">Отмена</button>
-          </div>
-        </form>
+          <form action="https://echo.htmlacademy.ru" class="create-post__form">
+            <div class="create-post__filters">
+              <ul class="create-post__filters-list">
+                <li class="create-post__filter-wrap">
+                  <button type="button" class="create-post__filter create-post__filter--crop"></button>
+                  <input type="range" class="create-post__filter-intensity">
+                </li>
+                <li class="create-post__filter-wrap">
+                  <button type="button" class="create-post__filter create-post__filter--fill"></button>
+                  <input type="range" class="create-post__filter-intensity">
+                </li>
+                <li class="create-post__filter-wrap">
+                  <button type="button" class="create-post__filter create-post__filter--contrast"></button>
+                  <input type="range" class="create-post__filter-intensity">
+                </li>
+              </ul>
+              <input type="range" class="create-post__filter-intensity create-post__filter-intensity--common">
+            </div>
+            <div class="create-post__form-actions">
+              <button class="create-post__form-action-button" type="submit">Запостить</button>
+              <button class="create-post__form-action-button create-post__form-action-button--reset" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

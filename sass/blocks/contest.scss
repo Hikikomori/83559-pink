@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+.contest__form {
+  display: block;
+}
+
 .contest__fieldset {
   border: none;
   margin: 0;
@@ -26,6 +30,16 @@
   text-transform: uppercase;
 }
 
+.contest__fieldset--contacts {
+  .contest__fieldset-heading {
+    display: none;
+  }
+}
+
+.contest__input-label-pair {
+  display: block;
+}
+
 .contest__label-text {
   @include opensans(400,14px,30px);
   color: $pink;
@@ -36,11 +50,13 @@
 
 .contest__input-text {
   border: 2px solid #e5e5e5;
+  box-sizing: border-box;
   color:$darkblue;
   height: 60px;
   line-height: 60px;
   min-width: 236px;
   padding: 0 20px;
+  width: 100%;
 
   &::placeholder {
     @include opensans(400,18px,60px);
@@ -50,6 +66,7 @@
 }
 
 .contest__form-submit {
+  display: block;
   padding: 0 20px 40px 20px;
 }
 
@@ -72,4 +89,93 @@
 
 .contest__form-hint-symbol {
   color: $pink;
+}
+
+@media (min-width: 700px) {
+  .contest__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contest__fieldset {
+    padding: 40px;
+
+    &--dark {
+      background-color: transparent;
+    }
+
+    &--initials {
+      order: 1;
+
+      .contest__label-text {
+        margin-left: 0;
+        margin-right: 20px;
+      }
+    }
+
+    &--app-platform {
+      order: 2;
+    }
+
+    &--contacts {
+      order: 3;
+
+      .contest__fieldset-heading {
+        display: block;
+      }
+
+      .contest__input-label-pair {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--achievements {
+      order: 4;
+    }
+
+    &--emotions {
+      order: 5;
+    }
+  }
+
+  .contest__input-label-pair {
+    align-items: center;
+    display: flex;
+  }
+
+  .contest__form-submit {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    order: 6;
+    padding: 40px;
+  }
+
+  .contest__form-submit-button {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contest__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .contest__fieldset {
+    width: 960px;
+
+    &--initials, &--app-platform{
+      width: 480px;
+    }
+
+    &--contacts {
+      display: flex;
+    }
+  }
+
+  .contest__form-submit {
+    width: 960px;
+  }
 }

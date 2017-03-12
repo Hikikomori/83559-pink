@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Конкурс от PINK</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
@@ -32,62 +33,91 @@
     </header>
     <main class="main-content">
       <div class="main-content__intro">
-        <h1 class="main-content__intro-heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="main-content__intro-heading">Конкурс на самое безбашенное путешествие&nbsp;с&nbsp;Пинк</h1>
       </div>
       <section class="contest">
         <header class="contest__header">
           <p class="contest__header-text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! </p>
         </header>
         <form action="https://echo.htmlacademy.ru" class="contest__form" method="POST">
-          <fieldset class="contest__fieldset">
-            <label for="surname" class="contest__label-text">Фамилия:</label>
-            <input type="text" class="contest__input-text" name="surname" id="surname" required="required" placeholder="Укажите фамилию *">
-            <label for="name" class="contest__label-text">Имя:</label>
-            <input type="text" class="contest__input-text" name="name" id="name" required="required" placeholder="Введите ваше имя *">
-            <label for="patronymic" class="contest__label-text">Отчество:</label>
-            <input type="text" class="contest__input-text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+          <fieldset class="contest__fieldset contest__fieldset--initials">
+            <div class="contest__input-label-pair contest__input-label-pair--text">
+              <label for="surname" class="contest__label-text">Фамилия:</label>
+              <input type="text" class="contest__input-text" name="surname" id="surname" required="required" placeholder="Укажите фамилию *">
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--text">
+              <label for="name" class="contest__label-text">Имя:</label>
+              <input type="text" class="contest__input-text" name="name" id="name" required="required" placeholder="Введите ваше имя *">
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--text">
+              <label for="patronymic" class="contest__label-text">Отчество:</label>
+              <input type="text" class="contest__input-text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+            </div>
           </fieldset>
-          <fieldset class="contest__fieldset contest__fieldset--dark">
+          <fieldset class="contest__fieldset contest__fieldset--achievements contest__fieldset--dark">
             <p class="contest__fieldset-heading">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</p>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check1" value="shark" checked="checked">
-            <label for="check1" class="contest__label-checkbox">Сделал селфи с акулой</label>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check2" value="burned" checked="checked">
-            <label for="check2" class="contest__label-checkbox">Обгорел на пляже</label>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check3" value="chuck norris">
-            <label for="check3" class="contest__label-checkbox">Видел Чака Норриса</label>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check4" value="souvenirs">
-            <label for="check4" class="contest__label-checkbox">Накупил сувениров</label>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check5" value="tower" checked="checked">
-            <label for="check5" class="contest__label-checkbox">Удержал башню</label>
-            <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check6" value="hotel">
-            <label for="check6" class="contest__label-checkbox">Разгромил отель</label>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check1" value="shark" checked="checked">
+              <label for="check1" class="contest__label-checkbox">Сделал селфи с акулой</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check2" value="burned" checked="checked">
+              <label for="check2" class="contest__label-checkbox">Обгорел на пляже</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check3" value="chuck norris">
+              <label for="check3" class="contest__label-checkbox">Видел Чака Норриса</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check4" value="souvenirs">
+              <label for="check4" class="contest__label-checkbox">Накупил сувениров</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check5" value="tower" checked="checked">
+              <label for="check5" class="contest__label-checkbox">Удержал башню</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--checkbox">
+              <input type="checkbox" class="contest__input-checkbox" name="achievements" id="check6" value="hotel">
+              <label for="check6" class="contest__label-checkbox">Разгромил отель</label>
+            </div>
           </fieldset>
-          <fieldset class="contest__fieldset">
-            <label for="tel" class="contest__label-text">Номер телефона</label>
-            <input type="tel" class="contest__input-text" name="tel" id="tel" placeholder="Номер, пожалуйста">
-            <label for="email" class="contest__label-text">Адрес почты</label>
-            <input type="email" class="contest__input-text" name="email" id="email" required="required" placeholder="Введите почту *">
+          <fieldset class="contest__fieldset contest__fieldset--contacts">
+            <p class="contest__fieldset-heading">Контактная информация</p>
+            <div class="contest__input-label-pair contest__input-label-pair--text">
+              <label for="tel" class="contest__label-text">Номер телефона</label>
+              <input type="tel" class="contest__input-text" name="tel" id="tel" placeholder="Номер, пожалуйста">
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--text">
+              <label for="email" class="contest__label-text">Адрес почты</label>
+              <input type="email" class="contest__input-text" name="email" id="email" required="required" placeholder="Введите почту *">
+            </div>
           </fieldset>
-          <fieldset class="contest__fieldset contest__fieldset--dark">
+          <fieldset class="contest__fieldset contest__fieldset--app-platform contest__fieldset--dark">
             <p class="contest__fieldset-heading">С каким приложением путешествовали?</p>
-            <input type="radio" name="app-platform" id="radio1" value="iOS" checked="checked">
-            <label for="radio1">Pink для iOS</label>
-            <input type="radio" name="app-platform" id="radio2" value="Android">
-            <label for="radio2">Pink на Android</label>
-            <input type="radio" name="app-platform" id="radio3" value="Windows Phone">
-            <label for="radio3">Windows Phone</label>
+            <div class="contest__input-label-pair contest__input-label-pair--radio">
+              <input type="radio" class="contest__input-radio" name="app-platform" id="radio1" value="iOS" checked="checked">
+              <label for="radio1" class="contest__label-radio">Pink для iOS</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--radio">
+              <input type="radio" class="contest__input-radio" name="app-platform" id="radio2" value="Android">
+              <label for="radio2" class="contest__label-radio">Pink на Android</label>
+            </div>
+            <div class="contest__input-label-pair contest__input-label-pair--radio">
+              <input type="radio" class="contest__input-radio" name="app-platform" id="radio3" value="Windows Phone">
+              <label for="radio3" class="contest__label-radio">Windows Phone</label>
+            </div>
           </fieldset>
-          <fieldset class="contest__fieldset">
+          <fieldset class="contest__fieldset contest__fieldset--emotions">
             <p class="contest__fieldset-heading">Опишите свои эмоции</p>
-            <textarea rows="10" cols="32" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="contest__textarea" rows="10" cols="32" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="contest__form-submit">
             <button type="submit" class="contest__form-submit-button">Отправить форму</button>
+            <div class="contest__form-hint">
+              <span class="contest__form-hint-symbol">*</span> — обязательные поля
+            </div>
           </div>
         </form>
-        <div class="contest__form-hint">
-          <span class="contest__form-hint-symbol">*</span> — обязательные поля
-        </div>
       </section>
     </main>
     <footer class="page-footer">

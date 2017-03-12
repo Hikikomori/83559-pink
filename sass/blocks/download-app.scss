@@ -25,6 +25,11 @@
 
 .download-app__markets-list {
   @include no-list-mark;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  padding: 0 20px;
 }
 
 .download-app__market-link {
@@ -58,4 +63,17 @@
 .download-app__availability {
   @include opensans(400,14px,24px);
   color: #fff;
+}
+
+@media (min-width: 700px) {
+  .download-app {
+    background-color: transparent;
+    padding-left: 40px;
+    width: 300px;
+  }
+
+  .download-app__availability {
+    font-size: 18px;
+    font-weight: 300;
+  }
 }

@@ -10,5 +10,29 @@
 .user-photos__header-text {
   @include opensans(400,14px,30px);
   margin: 0;
-  padding: 0 15px;
+}
+
+@media (min-width: 700px) {
+  .user-photos__header {
+    padding: 95px 40px 80px 40px;
+  }
+
+  .user-photos__header-text {
+    font-size: 18px;
+    padding: 0 60px;
+  }
+
+  .user-photos__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-photos__content {
+    margin: 0;
+    padding: 0 120px;
+  }
 }

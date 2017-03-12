@@ -1,6 +1,6 @@
 @mixin opensans($weight, $size, $height) {
   font: {
-    family: "Open Sans";
+    family: "Open Sans", Tahoma, sans-serif;;
     size: $size;
     weight: $weight;
   }
@@ -14,4 +14,9 @@
 
 @mixin no-list-mark {
   list-style-type: none;
+}
+
+/*Для разработки*/
+@mixin outline {
+  outline: 2px solid #fff;
 }
