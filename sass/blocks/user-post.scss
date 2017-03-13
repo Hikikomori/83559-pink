@@ -64,7 +64,7 @@
   }
 
   .user-post:not(.user-post--panorama) {
-    width: 300px;
+    width: calc(50% - 20px);
   }
 
   .user-post--panorama {
@@ -94,5 +94,11 @@
   .user-post__likes-wrap {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-post:not(.user-post--panorama){
+    width: 300px;
   }
 }
