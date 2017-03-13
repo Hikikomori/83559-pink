@@ -7,6 +7,7 @@
     "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
     "browser-sync": "2.18.8",
+    "editorconfig-cli": "^0.2.1",
     "gulp": "3.9.1",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",

@@ -1,17 +1,67 @@
-.reviews__item {
+.reviews__item-wrap {
   display: none;
-  padding: 0 20px;
-  text-align: center;
 
   &--visible {
     display: block;
   }
 }
 
+.reviews__item {
+  padding: 0 20px;
+  text-align: center;
+}
+
 .reviews__author {
   @include opensans(700,18px,30px);
 }
 
+.reviews__author-age-career {
+  @include opensans(400,14px,30px);
+  display: none;
+}
+
 .reviews__content {
   @include opensans(400,14px,30px);
+}
+
+.reviews__change {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .reviews__item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reviews__author {
+    font-size: 20px;
+  }
+
+  .reviews__author-age-career {
+    display: block;
+  }
+
+  .reviews__content {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .reviews {
+    display: flex;
+    padding: 0 120px;
+  }
+
+  .reviews__item-wrap {
+    padding: 0 120px;
+  }
+
+  .reviews__item-selector {
+    display: none;
+  }
+
+  .reviews__change {
+    display: block;
+  }
 }

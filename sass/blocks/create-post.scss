@@ -13,8 +13,13 @@
   margin: 0;
 }
 
-.create-post__photo {
+.create-post__photo-wrap {
   padding: 20px;
+}
+
+.create-post__photo {
+  max-width: none;
+  width: 100%
 }
 
 .create-post__filters {
@@ -23,6 +28,11 @@
 
 .create-post__filters-list {
   @include no-list-mark;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  padding: 0 30px;
 }
 
 .create-post__filter {
@@ -45,6 +55,14 @@
     background-image: url("../img/icon-editor-contrast.svg");
     height: 32px;
     width: 32px;
+  }
+}
+
+.create-post__filter-intensity {
+  display: none;
+
+  &--common{
+    display: block;
   }
 }
 
@@ -86,6 +104,63 @@
     &:active {
     background-color: #b5b9be;
     color: rgba(255,255,255,.3);
+    }
+  }
+}
+
+
+@media (min-width: 700px) {
+  .create-post__header {
+    padding: 67px 40px;
+  }
+
+  .create-post__header-text {
+    font-size: 18px;
+  }
+
+  .create-post__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 40px;
+  }
+
+  .create-post__photo-wrap {
+    padding: 0;
+  }
+
+  .create-post__form {
+    width: 275px;
+  }
+
+  .create-post__filters {
+    border: none;
+  }
+
+  .create-post__filters-list {
+    @include no-indents;
+    display: block;
+  }
+
+  .create-post__filter-wrap {
+    align-items: center;
+    border-bottom: 1px solid $darkgray;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+
+  .create-post__filter {
+    cursor: default;
+    transform: scale(.5);
+  }
+
+
+  .create-post__filter-intensity {
+    display: block;
+
+    &--common{
+      display: none;
     }
   }
 }

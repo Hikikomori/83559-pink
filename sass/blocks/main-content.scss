@@ -8,7 +8,24 @@
   text-align: center;
 
   &--index {
-    height: 462px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 753px;
+    position: relative;
+
+    .main-content__intro-heading {
+      display: none;
+    }
+
+    &::after {
+      background-image: url("../img/iphone-hand-mobile@1x.png");
+      bottom: 291px;
+      content: "";
+      height: 286px;
+      left: 0;
+      position: absolute;
+      width: 258px;
+    }
   }
 }
 
@@ -17,4 +34,35 @@
   color: #fff;
   margin: 0;
   padding: 100px 20px 0 20px;
+}
+
+@media (min-width: 700px) {
+  .main-content {
+  margin-top: -110px;
+  }
+
+  .main-content__intro--index {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &::after {
+      left: auto;
+      right: 40px;
+    }
+
+    .main-content__intro-heading {
+      box-sizing: border-box;
+      display: block;
+      font-size: 40px;
+      line-height: 50px;
+      margin-left: 40px;
+      padding: 205px 30px 0px 30px;
+      width: 300px;
+    }
+  }
+  .main-content__intro-heading {
+    font-size: 50px;
+    line-height: 62px;
+    padding: 190px 0 150px 40px;
+  }
 }

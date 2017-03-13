@@ -21,3 +21,116 @@
 .about-app__feature-text {
   @include opensans(400,14px,24px);
 }
+
+.about-app__inner {
+  padding-bottom: 325px;
+  position: relative;
+
+  &::after {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover; /*временно*/
+    bottom: 0;
+    content: "";
+    height: 278px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 157px;
+  }
+}
+
+.about-app__effect {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .about-app {
+    padding: 0 40px;
+  }
+
+  .about-app__header {
+    margin: 0 -40px;
+    padding: 30px 0
+  }
+
+  .about-app__header-text {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0;
+  }
+
+  .about-app__header-text:last-of-type {
+    padding: 0 100px;
+  }
+
+  .about-app__inner {
+    padding-bottom: 48px;
+    padding-top: 80px;
+    &::after {
+      height: 482px;
+      left: 0;
+      transform: none;
+      width: 270px;
+    }
+  }
+
+  .about-app__feature {
+    padding-left: 310px;
+    padding-right: 40px;
+    text-align: left;
+  }
+
+  .about-app__effect {
+    background-color: #fff;
+    display: block;
+    margin: 0 -40px;
+    text-align: left;
+    padding: 100px 40px 100px 350px;
+  }
+
+  .about-app__effect-heading {
+    @include opensans(700,30px,36px);
+    padding-right: 85px;
+  }
+
+  .about-app__effect-text {
+    @include opensans(400,14px,24px);
+    padding-right: 70px;
+  }
+
+  .about-app__effect-link {
+    @include opensans(400,14px,24px);
+    border-bottom: 1px solid $pink;
+    color: $pink;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-app__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 120px;
+    padding-right: 120px;
+    &::after {
+      display: none;
+    }
+  }
+
+  .about-app__feature {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .about-app__feature-heading {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .about-app__feature-text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
