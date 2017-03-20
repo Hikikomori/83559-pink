@@ -9,8 +9,8 @@
 
   &--index {
     display: flex;
-    flex-direction: column-reverse;
-    height: 735px;
+    flex-direction: column;
+    min-height: 711px;
     position: relative;
 
     .main-content__intro-heading {
@@ -19,11 +19,11 @@
 
     &::after {
       background-image: url("../img/iphone-hand-mobile@1x.png");
-      bottom: 271px;
       content: "";
       height: 286px;
       left: 0;
       position: absolute;
+      top: 177px;
       width: 258px;
     }
   }

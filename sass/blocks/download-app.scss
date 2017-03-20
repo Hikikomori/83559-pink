@@ -1,5 +1,6 @@
 .download-app {
   background-color: #1d2631;
+  margin-top: 462px;
   padding: 28px 20px 16px 20px;
   text-align: center;
 }
@@ -69,6 +70,7 @@
 @media (min-width: 700px) {
   .download-app {
     background-color: transparent;
+    margin-top: 0;
     padding-left: 0;
     padding-top: 32px;
     width: 300px;
