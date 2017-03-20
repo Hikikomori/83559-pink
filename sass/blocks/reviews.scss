@@ -83,6 +83,10 @@
     @include deksktop-centerer-narrow;
   }
 
+  .reviews__list {
+    width: 908px; /*IE...*/
+  }
+
   .reviews__item-wrap {
     padding: 0 90px;
   }
