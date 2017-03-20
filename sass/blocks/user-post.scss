@@ -2,7 +2,25 @@
   background-color: $gray;
   margin: 20px;
   margin-top: 0;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
+
+  &--panorama {
+    padding-bottom: 17px;
+    position: relative;
+    &::after {
+      @include opensans(700,12px,33px);
+      background-color: $pink;
+      color: #fff;
+      content: "Панорама Дня";
+      height: 36px;
+      right: 0;
+      position: absolute;
+      top: 0;
+      text-align: center;
+      text-transform: uppercase;
+      width: 140px;
+    }
+  }
 }
 
 .user-post__photo {
@@ -23,10 +41,12 @@
 
 .user-post__info {
   display: flex;
+  margin-top: 15px;
 }
 
 .user-post__author {
   @include opensans(700,14px,24px);
+  padding-right: 5px;
 }
 
 .user-post__created {
@@ -36,6 +56,8 @@
 
 .user-post__content {
   @include opensans(400,14px,24px);
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .user-post__likes-wrap {
@@ -46,6 +68,7 @@
 .user-post__like-button {
   border: none;
   background-image: url("../img/icon-heart.svg");
+  background-repeat: no-repeat;
   cursor: pointer;
   height: 12px;
   margin-right: 20px;
@@ -60,7 +83,7 @@
 
 @media (min-width: 700px) {
   .user-post {
-    margin: 10px;
+    margin: 10px 10px 13px 10px;
   }
 
   .user-post:not(.user-post--panorama) {
@@ -69,9 +92,42 @@
 
   .user-post--panorama {
     margin: 0 10px 40px 10px;
+    padding-bottom: 13px;
+
+    &::after {
+      top: 58px;
+    }
+
+    .user-post__desc {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 20px;
+    }
+
+    .user-post__info{
+      flex-grow: 1;
+      margin-top: 0;
+      order: 1px;
+    }
+
+    .user-post__content {
+      order: 2;
+    }
+
+    .user-post__likes-wrap {
+      flex-grow: 1;
+      justify-content: flex-start;
+      order: 1px;
+    }
+
+    .user-post__like-button {
+      margin-left: 17px;
+      margin-right: 2px;
+    }
   }
 
   .user-post__photo {
+    height: 300px;
     max-width: none;
     width: 100%;
 
@@ -88,17 +144,52 @@
   }
 
   .user-post__desc {
-    padding: 30px 27px 0 27px;
+    padding: 5px 27px 0 27px;
   }
 
   .user-post__likes-wrap {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
+
+  .user-post__like-button {
+      margin-right: 5px;
+  }
 }
 
 @media (min-width: 1200px) {
-  .user-post:not(.user-post--panorama){
-    width: 300px;
+  .user-post{
+    margin-bottom: 46px;
+
+    &:not(.user-post--panorama){
+      width: 300px;
+    }
+  }
+
+  .user-post--panorama {
+    margin: 0 10px 40px 10px;
+    padding-bottom: 13px;
+
+    &::after {
+      top: 55px;
+    }
+
+    .user-post__content {
+      min-height: 26px;
+    }
+
+    .user-post__like-button {
+      margin-right: 5px;
+    }
+  }
+
+  .user-post__photo {
+    height: 400px;
+
+    &--panorama {
+      height: 506px;
+      margin: 0 -130px;
+      width: calc(100% + 260px);
+    }
   }
 }
