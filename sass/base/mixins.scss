@@ -16,7 +16,12 @@
   list-style-type: none;
 }
 
-/*Для разработки*/
-@mixin outline {
-  outline: 2px solid #fff;
+@mixin deksktop-centerer {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@mixin deksktop-centerer-narrow {
+  margin: 0 auto;
+  max-width: 940px;
 }

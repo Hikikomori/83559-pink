@@ -1,16 +1,16 @@
 .main-content {
-  margin-top: -65px;
+  background: #2a3a4a url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
+  margin-top: -68px;
 }
 
 .main-content__intro {
-  background: #2a3a4a url("../img/bg-back-mobile@1x.jpg") 50% 0 no-repeat;
   min-height: 237px;
   text-align: center;
 
   &--index {
     display: flex;
-    flex-direction: column-reverse;
-    height: 753px;
+    flex-direction: column;
+    min-height: 711px;
     position: relative;
 
     .main-content__intro-heading {
@@ -19,11 +19,11 @@
 
     &::after {
       background-image: url("../img/iphone-hand-mobile@1x.png");
-      bottom: 291px;
       content: "";
       height: 286px;
       left: 0;
       position: absolute;
+      top: 177px;
       width: 258px;
     }
   }
@@ -33,36 +33,72 @@
   @include opensans(300,24px,30px);
   color: #fff;
   margin: 0;
-  padding: 100px 20px 0 20px;
+  padding: 96px 20px 0 20px;
 }
 
 @media (min-width: 700px) {
   .main-content {
-  margin-top: -110px;
+    margin-top: -110px;
   }
 
-  .main-content__intro--index {
+  .main-content__intro-wrap{
+    @include no-indents;
+  }
+
+  .main-content__intro{
+    min-height: 440px;
+    padding: 0 40px;
+
+    &--index {
     flex-direction: column;
+    height: 728px;
     justify-content: flex-start;
 
-    &::after {
-      left: auto;
-      right: 40px;
-    }
+      &::after {
+        left: auto;
+        right: 40px;
+      }
 
-    .main-content__intro-heading {
-      box-sizing: border-box;
-      display: block;
-      font-size: 40px;
-      line-height: 50px;
-      margin-left: 40px;
-      padding: 205px 30px 0px 30px;
-      width: 300px;
+      .main-content__intro-heading {
+        box-sizing: border-box;
+        display: block;
+        font-size: 40px;
+        line-height: 48px;
+        padding: 200px 35px 0px 33px;
+        width: 300px;
+      }
     }
   }
   .main-content__intro-heading {
     font-size: 50px;
-    line-height: 62px;
-    padding: 190px 0 150px 40px;
+    line-height: 61px;
+    padding-bottom: 79px;
+    padding-top: 177px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-content__intro-wrap {
+    @include deksktop-centerer;
+  }
+
+  .main-content__intro{
+    min-height: 394px;
+    padding: 0 130px;
+
+    &--index {
+      height: 853px;
+    }
+  }
+
+  .main-content__intro-heading {
+    padding-top: 171px;
+  }
+
+  .main-content__intro--index .main-content__intro-heading{
+    font-size: 50px;
+    line-height: 61px;
+    padding-left: 32px;
+    padding-top: 216px;
   }
 }

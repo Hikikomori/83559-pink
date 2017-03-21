@@ -1,6 +1,7 @@
 .download-app {
   background-color: #1d2631;
-  padding: 28px 20px;
+  margin-top: 462px;
+  padding: 28px 20px 16px 20px;
   text-align: center;
 }
 
@@ -25,10 +26,11 @@
 
 .download-app__markets-list {
   @include no-list-mark;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   justify-content: space-around;
-  margin: 30px 0;
+  margin-bottom: 24px;
+  margin-top: 30px;
   padding: 0 20px;
 }
 
@@ -61,19 +63,43 @@
 }
 
 .download-app__availability {
-  @include opensans(400,14px,24px);
+  @include opensans(300,14px,24px);
   color: #fff;
 }
 
 @media (min-width: 700px) {
   .download-app {
     background-color: transparent;
-    padding-left: 40px;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 32px;
     width: 300px;
   }
 
   .download-app__availability {
     font-size: 18px;
     font-weight: 300;
+  }
+
+  .download-app__markets-list {
+    margin-bottom: 38px;
+    margin-top: 44px;
+    padding-left: 28px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download-app {
+    padding-top: 50px;
+  }
+
+  .download-app__main-link {
+    font-size: 21px;
+  }
+
+  .download-app__markets-list {
+    margin-bottom: 56px;
+    margin-top: 66px;
   }
 }

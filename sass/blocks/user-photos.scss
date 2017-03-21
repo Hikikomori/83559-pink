@@ -1,9 +1,10 @@
 .user-photos {
+  background-color: #fff;
   margin-bottom: -20px;
 }
 
 .user-photos__header {
-  padding: 47px 20px;
+  padding: 48px 20px;
   text-align: center;
 }
 
@@ -13,8 +14,12 @@
 }
 
 @media (min-width: 700px) {
+  .user-photos-wrap {
+    @include no-indents;
+  }
+
   .user-photos__header {
-    padding: 95px 40px 80px 40px;
+    padding: 93px 40px 74px 40px;
   }
 
   .user-photos__header-text {
@@ -31,8 +36,15 @@
 }
 
 @media (min-width: 1200px) {
+  .user-photos-wrap {
+    @include deksktop-centerer;
+  }
+
+  .user-photos__header {
+    padding: 90px 130px;
+  }
+
   .user-photos__content {
-    margin: 0;
-    padding: 0 120px;
+    padding: 0 130px;
   }
 }
