@@ -1,14 +1,15 @@
 .price {
   align-items: center;
-  background-color: $gray;
+  background-color: $lightgray;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   padding-top: 90px;
 }
 
 .price__item-list {
   border-collapse: collapse;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
   width: auto;
 }
 
@@ -20,13 +21,39 @@
 .price__header {
   background-color: $darkblue;
   background-clip: padding-box;
-  border: 2px solid #e5e5e5;
+  border: 2px solid $gray;
   border-top: none;
   color: #fff;
   min-width: 274px;
   text-align: center;
-  padding-bottom: 21px;
+  padding-bottom: 19px;
   padding-top: 17px;
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+      content: "";
+      height: 73px;
+      left: -3px;
+      position: absolute;
+      width: 74px;
+      top: 0;
+    }
+
+    &::after {
+      @include opensans(600,14px,30px);
+      color: #fff;
+      content: "Хит";
+      left: 7px;
+      position: absolute;
+      text-transform: uppercase;
+      top: 13px;
+      transform: rotate(-45deg);
+    }
+  }
 }
 
 .price__header:empty {
@@ -40,7 +67,8 @@
 }
 
 .price__cost {
-  @include opensans(300,24px,30px)
+  @include opensans(300,24px,30px);
+  margin-top: 2px;
 }
 
 .price__feature-list {
@@ -52,7 +80,7 @@
   @include opensans(400,14px,30px);
   background-clip: padding-box;
   background-color: #fff;
-  border: 2px solid #e5e5e5;
+  border: 2px solid $gray;
   padding: 14px 55px 14px 22px;
   position: relative;
   text-transform: uppercase;
@@ -70,8 +98,11 @@
   &--yes {
     &::after {
       background-image: url("../img/icon-yes.svg");
-      height: 20px;
-      width: 27px;
+      background-size: 31px 21px;
+      height: 21px;
+      right: 17px;
+      top: 47%;
+      width: 31px;
     }
   }
 
@@ -85,13 +116,46 @@
 }
 
 .price__item-selector {
-  padding-bottom: 52px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.price__item-select {
+  background-color: #bec2c7;
+  border: 3px solid #f2f2f2;
+  border-radius: 50%;
+  box-sizing: content-box;
+  height: 6px;
+  margin: 0 5px 0 4px;
+  padding: 0;
+  width: 6px;
+
+  &:hover {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+  }
+
+  &--active {
+    background-color: #fff;
+    border-color: $darkblue;
+
+     &:hover {
+      background-color: #fff;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
+  }
 }
 
 @media (min-width: 700px) {
   .price {
     display: block;
-    padding: 91px 40px 38px 40px;
+    padding: 91px 40px 35px 40px;
   }
 
   .price-wrap {
@@ -107,6 +171,22 @@
     &:last-of-type {
       border-right-color: $darkblue;
     }
+
+    &--hit {
+      position: relative;
+
+      &::before {
+        background-image: url("../img/bg-hit-tablet.svg");
+        height: 60px;
+        left: 0;
+        width: 60px;
+      }
+
+      &::after {
+        left: 5px;
+        top: 3px;
+      }
+    }
   }
 
   .price__item-list {
@@ -120,22 +200,24 @@
 
   .price__feature--no,
   .price__feature--yes {
-    font-size: 0;
+    text-indent: -9999px;
   }
 
   .price__header {
     min-width: 25%;
-    padding-bottom: 10px;
-    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-top: 14px;
+    width: 25%;
   }
 
   .price__name {
     font-size: 16px;
-    line-height: 28px;
+    line-height: 26px;
   }
 
   .price__cost {
     font-size: 18px;
+    margin-top: -1px;
   }
 
   .price__feature {
@@ -156,7 +238,7 @@
 
 @media (min-width: 1200px) {
   .price {
-    padding: 149px 130px 66px 130px;
+    padding: 149px 130px 60px 130px;
   }
 
   .price-wrap {
@@ -166,6 +248,22 @@
   .price__header {
     padding-bottom: 21px;
     padding-top: 17px;
+
+    &--hit {
+
+      &::before {
+        background-image: url("../img/bg-hit.svg");
+        height: 73px;
+        left: 0;
+        width: 74px;
+        top: 0;
+      }
+
+      &::after {
+        left: 9px;
+        top: 12px;
+      }
+    }
   }
 
   .price__name {
@@ -178,7 +276,7 @@
   }
 
   .price__feature {
-    padding: 12px 0 16px 21px;
+    padding: 12px 0 17px 21px;
 
     &:first-of-type{
       font-size: 18px;

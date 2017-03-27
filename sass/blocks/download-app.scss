@@ -20,7 +20,8 @@
   }
 
   &:active {
-    color: opacify($pink, 0.3);
+    background-color: #fff;
+    color: rgba($pink,.3);
   }
 }
 
@@ -73,7 +74,9 @@
     margin-top: 0;
     padding-left: 0;
     padding-top: 32px;
+    position: relative;
     width: 300px;
+    z-index: 1;
   }
 
   .download-app__availability {

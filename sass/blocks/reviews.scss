@@ -1,10 +1,12 @@
 .reviews {
+  @include bg-triangle(26px, "primary");
   background-color: #fff;
   padding-top: 42px;
+  text-align: center;
 }
 
 .reviews__list {
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .reviews__item-wrap {
@@ -17,7 +19,6 @@
 
 .reviews__item {
   padding: 0 20px;
-  text-align: center;
 }
 
 .reviews__author {
@@ -34,7 +35,40 @@
 }
 
 .reviews__item-selector {
-  padding-bottom: 47px;
+  padding-bottom: 42px;
+}
+
+.reviews__item-select {
+  background-color: #bec2c7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-sizing: content-box;
+  height: 6px;
+  margin: 0 5px 0 4px;
+  padding: 0;
+  width: 6px;
+
+  &:hover {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
+  }
+
+  &--active {
+    background-color: #fff;
+    border-color: $darkblue;
+    margin-left: 5px;
+
+     &:hover {
+      background-color: #fff;
+    }
+
+    &:active {
+      background-color: #fff;
+    }
+  }
 }
 
 .reviews__change {
@@ -43,6 +77,7 @@
 
 @media (min-width: 700px) {
   .reviews {
+    @include bg-triangle(55px, "secondary");
     padding-top: 8px;
   }
 
@@ -61,6 +96,7 @@
 
   .reviews__author-age-career {
     display: block;
+    padding-top: 2px;
   }
 
   .reviews__content {
@@ -69,18 +105,33 @@
   }
 
   .reviews__item-selector {
-    padding-bottom: 40px;
+    margin-top: 17px;
+    padding-bottom: 17px;
   }
 }
 
 @media (min-width: 1200px) {
   .reviews {
-    padding: 168px 130px 32px 130px;
+    @include bg-triangle(82px, "secondary");
+    padding: 168px 130px 28px 130px;
   }
 
   .reviews-wrap {
-    display: flex;
     @include deksktop-centerer-narrow;
+    align-items: flex-start;
+    display: flex;
+    position: relative;
+
+    &::before {
+      background-image: url("../img/icon-quotes.svg");
+      content: "";
+      height: 64px;
+      left: 50%;
+      position: absolute;
+      top: -96px;
+      transform: translateX(-47%);
+      width: 79px;
+    }
   }
 
   .reviews__list {
@@ -88,7 +139,7 @@
   }
 
   .reviews__item-wrap {
-    padding: 0 90px;
+    padding: 0 75px;
   }
 
   .reviews__content-quotes {
@@ -109,6 +160,19 @@
   }
 
   .reviews__change {
-    display: block;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    fill: rgba($darkblue, .3);
+    margin-top: 45px;
+    padding: 0;
+
+    &:hover {
+      fill: rgba($darkblue, .6);
+    }
+
+    &:active {
+      fill: rgba($darkblue, .1);
+    }
   }
 }
