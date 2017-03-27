@@ -148,7 +148,7 @@
 }
 
 @media (min-width: 700px) and (min-resolution: 192dpi),
-       (min-width: 700px) and (min-resolution: 2dppx) {
+      (min-width: 700px) and (min-resolution: 2dppx) {
   .about-app__inner::after {
     background-image: url("../img/iphone-screen-3-tablet@2x.png");
   }
@@ -254,7 +254,7 @@
 }
 
 @media (min-width: 1200px) and (min-resolution: 192dpi),
-       (min-width: 1200px) and (min-resolution: 2dppx) {
+      (min-width: 1200px) and (min-resolution: 2dppx) {
 
   .about-app__feature {
     &:nth-child(1)::before {
