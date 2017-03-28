@@ -10,7 +10,6 @@
 }
 
 .page-header__menu-top-row {
-  align-items: center;
   background-color: rgba(0,0,0,.3);
   display: flex;
   height: 65px;
@@ -19,7 +18,30 @@
 }
 
 .page-header__menu-logo {
+  fill: #fff;
   min-width: 75px;
+}
+
+.page-header__menu-logo-link {
+  fill: #fff;
+
+  &:hover {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: #fff;
+    opacity: .3;
+  }
+}
+
+.page-header__menu-logo-image {
+  margin-left: -72px;
+  margin-top: 4px;
+
+  &--tablet,&--desktop {
+    display: none;
+  }
 }
 
 .page-header__menu--opened {
@@ -37,14 +59,35 @@
 }
 
 .page-header__menu-button {
-  background-image: url("../img/icon-menu-burger.svg");
   border: none;
   height: 24px;
+  fill: #fff;
+  margin-top: 20px;
+  padding: 0;
   width: 50px;
 
+  &--cross {
+    display: none;
+  }
+
   &--close-menu {
-    background-image: url("../img/icon-menu-cross.svg");
     width: 24px;
+
+    .page-header__menu-button--burger {
+      display: none;
+    }
+
+    .page-header__menu-button--cross {
+      display: inline;
+    }
+  }
+
+  &:hover {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: rgba($pink,0.3);
   }
 }
 
@@ -78,7 +121,7 @@
   }
 
   &:active {
-    color: opacify($pink, 0.3);
+    color: rgba($pink,0.3);
   }
 }
 
@@ -93,6 +136,19 @@
   .page-header__menu--opened .page-header__menu-top-row {
     height: 110px;
     padding: 0 40px;
+  }
+
+  .page-header__menu-logo-image {
+    margin-left: 0;
+    margin-top: 27px;
+
+    &--tablet {
+      display: inline;
+    }
+  }
+
+  .page-header__menu-button {
+    margin-top: 44px;
   }
 }
 
@@ -109,7 +165,17 @@
     align-items: center;
     display: flex;
     padding: 0 130px;
+  }
 
+  .page-header__menu-logo-image {
+
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline;
+    }
   }
 
   .page-header__menu-top-row,
@@ -128,7 +194,8 @@
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
-    padding-left: 243px;
+    margin-top: -3px;
+    padding-left: 172px;
   }
 
   .page-header__menu-item {
@@ -136,7 +203,21 @@
     box-shadow: none;
     font-weight: 400;
     line-height: 18px;
+    padding-bottom: 11px;
+    padding-top: 13px;
     text-transform: none;
+
+    &:hover {
+      color: $pink;
+    }
+
+    &--active {
+      border-bottom: 2px solid #fff;
+
+      &:hover {
+        border-color: $pink;
+      }
+    }
   }
 
   .page-header__menu-item-link {

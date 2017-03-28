@@ -1,5 +1,5 @@
 .create-post {
-  background-color: $gray;
+  background-color: $lightgray;
 }
 
 .create-post__header {
@@ -24,7 +24,7 @@
 
 .create-post__filters {
   border-bottom: 1px solid $darkgray;
-  padding-bottom: 22px;
+  padding-bottom: 34px;
 }
 
 .create-post__filters-list {
@@ -32,45 +32,79 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 26px;
+  margin-bottom: 32px;
   margin-top: 17px;
   padding-left: 55px;
   padding-right: 65px;
 }
 
 .create-post__filter {
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
-  cursor: pointer;
+  fill: #b5b9be;
   height: 48px;
+  padding: 0;
   width: 48px;
 
-  &--crop {
-    background-image: url("../img/icon-editor-crop.svg");
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &--active {
+    fill: $pink;
+
+    &:hover {
+      fill: $pink;
+    }
   }
 
   &--fill {
-    background-image: url("../img/icon-editor-fill.svg");
+    margin-right: 10px;
+    padding-top: 1px;
   }
 
   &--contrast {
-    background-image: url("../img/icon-editor-contrast.svg");
     height: 32px;
     width: 32px;
   }
 }
 
 .create-post__filter-intensity {
+  background-color: $darkblue;
   display: none;
+  height: 2px;
+  margin-left: 38px;
+  margin-right: 42px;
+  position: relative;
+
+  &::after {
+    background-color: $lightgray;
+    border: 2px solid $pink;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+  }
+
+  &:active {
+    &::after {
+      background-color: $pink;
+    }
+  }
 
   &--common{
     display: block;
+
+    &::after {
+      right: 33px;
+    }
   }
 }
 
 .create-post__form-actions {
-  padding: 37px 20px 30px 20px;
+  padding: 37px 20px 32px 20px;
 }
 
 .create-post__form-action-button {
@@ -118,7 +152,7 @@
   }
 
   .create-post__header {
-    padding: 75px 40px 70px 40px;
+    padding: 73px 40px 69px 40px;
   }
 
   .create-post__header-text {
@@ -128,7 +162,7 @@
   .create-post__main {
     display: flex;
     justify-content: space-between;
-    padding: 55px 40px 32px 40px;
+    padding: 56px 40px 32px 40px;
   }
 
   .create-post__photo-wrap {
@@ -137,11 +171,12 @@
   }
 
   .create-post__photo {
+    padding-top: 1px;
     width: 100%;
   }
 
   .create-post__form {
-    width: 275px;
+    width: 273px;
   }
 
   .create-post__filters {
@@ -170,25 +205,60 @@
     display: flex;
     height: 42px;
     justify-content: space-between;
-    margin-bottom: 29px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
     padding-right: 17px;
+
+    &--contrast {
+      margin-top: -3px;
+    }
   }
 
   .create-post__filter {
-    transform: scale(.5);
+    fill: $pink;
+    height: 24px;
+    position: relative;
+    width: 24px;
+
+    &--fill {
+      left: 1px;
+      margin: 0;
+      top: 1px;
+    }
 
     &--contrast {
-      height: 48px;
-      width: 48px;
+      height: 16px;
+      left: 6px;
+      width: 16px;
     }
   }
 
 
   .create-post__filter-intensity {
     display: block;
+    margin: 0;
+    width: 202px;
 
     &--common{
       display: none;
+    }
+
+    &--crop{
+      &::after {
+        left: 145px;
+      }
+    }
+
+    &--fill{
+      &::after {
+        left: 24px;
+      }
+    }
+
+    &--contrast{
+      &::after {
+        left: 95px;
+      }
     }
   }
 
@@ -197,7 +267,8 @@
   }
 
   .create-post__form-action-button {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+    padding: 14px 25px 17px 21px;
   }
 }
 
@@ -213,7 +284,7 @@
   }
 
   .create-post__header {
-    padding: 36px 0 65px 0;
+    padding: 35px 0 65px 0;
   }
 
   .create-post__main {
@@ -232,26 +303,58 @@
   .create-post__filter-wrap {
     align-items: flex-start;
     height: 60px;
-    margin-bottom: 10px;
-    padding-right: 9px;
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    padding-right: 30px;
   }
 
   .create-post__filter {
-    transform: none;
+    height: 48px;
+    width: 48px;
 
-    &--fill {
-      margin-left: 2px;
-      margin-top: 4px;
+    &--contrast {
+      height: 32px;
+      left: 8px;
+      top: 8px;
+      width: 32px;
+    }
+  }
+
+  .create-post__filter-intensity {
+    margin-top: 23px;
+    width: 288px;
+
+    &::after {
+      cursor: pointer;
+    }
+
+    &--crop{
+      &::after {
+        left: 71px;
+      }
+    }
+
+    &--fill{
+      &::after {
+        left: 247px;
+      }
+    }
+
+    &--contrast{
+      &::after {
+        left: 160px;
+      }
     }
   }
 
   .create-post__form-actions {
     display: flex;
     justify-content: space-between;
-    padding: 121px 0 0 2px;
+    padding: 119px 0 0 2px;
   }
 
   .create-post__form-action-button {
+    padding-left: 30px;
     width: 183px;
   }
 }

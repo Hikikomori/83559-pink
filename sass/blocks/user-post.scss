@@ -1,5 +1,5 @@
 .user-post {
-  background-color: $gray;
+  background-color: $lightgray;
   margin: 20px;
   margin-top: 0;
   padding-bottom: 20px;
@@ -7,6 +7,9 @@
   &--panorama {
     padding-bottom: 17px;
     position: relative;
+  }
+
+  &--panorama-of-the-day{
     &::after {
       @include opensans(700,12px,33px);
       background-color: $pink;
@@ -69,6 +72,7 @@
   border: none;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
+  background-size: 13px 12px;
   cursor: pointer;
   height: 12px;
   margin-right: 20px;
@@ -83,58 +87,57 @@
 
 @media (min-width: 700px) {
   .user-post {
-    margin: 10px 10px 13px 10px;
-  }
-
-  .user-post:not(.user-post--panorama) {
+    margin: 10px;
+    padding-bottom: 24px;
     width: calc(50% - 20px);
-  }
 
-  .user-post--panorama {
-    margin: 0 10px 40px 10px;
-    padding-bottom: 13px;
+    &--panorama {
+      margin: 0 10px 40px 10px;
+      padding-bottom: 13px;
+      width: 100%;
 
-    &::after {
-      top: 58px;
-    }
+      &::after {
+        top: 58px;
+      }
 
-    .user-post__desc {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 20px;
-    }
+      .user-post__desc {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+      }
 
-    .user-post__info{
-      flex-grow: 1;
-      margin-top: 0;
-      order: 1px;
-    }
+      .user-post__info{
+        flex-grow: 1;
+        margin-top: 0;
+        order: 1;
+      }
 
-    .user-post__content {
-      order: 2;
-    }
+      .user-post__content {
+        order: 2;
+      }
 
-    .user-post__likes-wrap {
-      flex-grow: 1;
-      justify-content: flex-start;
-      order: 1px;
-    }
+      .user-post__likes-wrap {
+        flex-grow: 1;
+        justify-content: flex-start;
+        order: 1;
+      }
 
-    .user-post__like-button {
-      margin-left: 17px;
-      margin-right: 2px;
+      .user-post__like-button {
+        margin-left: 17px;
+        margin-right: 2px;
+      }
     }
   }
 
   .user-post__photo {
-    height: 300px;
     max-width: none;
+    min-height: 300px;
     width: 100%;
 
     &--panorama {
-      height: 510px;
       margin: 0 -40px;
       max-width: none;
+      min-height: 509px;
       width: calc(100% + 80px);
     }
   }
@@ -159,7 +162,7 @@
 
 @media (min-width: 1200px) {
   .user-post{
-    margin-bottom: 46px;
+    margin-bottom: 43px;
 
     &:not(.user-post--panorama){
       width: 300px;
@@ -184,11 +187,11 @@
   }
 
   .user-post__photo {
-    height: 400px;
+    min-height: 400px;
 
     &--panorama {
-      height: 506px;
       margin: 0 -130px;
+      min-height: 506px;
       width: calc(100% + 260px);
     }
   }
