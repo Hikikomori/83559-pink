@@ -162,7 +162,7 @@
               </div>
             </div>
             <div class="contest__form-submit">
-              <button type="submit" class="contest__form-submit-button">Отправить форму</button>
+              <button type="submit" class="contest__form-submit-button" id="submit">Отправить форму</button>
               <div class="contest__form-hint">
                 <span class="contest__form-hint-symbol">*</span> — обязательные <span class="contest__form-hint-desktop">для заполнения</span> поля
               </div>
@@ -226,6 +226,21 @@
         </a>
       </div>
     </footer>
+    <div class="page-popup page-popup--success">
+      <h2 class="page-popup__heading">Ваша заявка отправлена</h2>
+      <p class="page-popup__content">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.</p>
+      <div class="page-popup__button-wrap">
+        <button class="page-popup__button">Закрыть Окно</button>
+      </div>
+    </div>
+    <div class="page-popup page-popup--failure">
+      <h2 class="page-popup__heading">Что-то пошло не&nbsp;так!</h2>
+      <p class="page-popup__content">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="page-popup__button-wrap">
+        <button class="page-popup__button">Oк</button>
+      </div>
+    </div>
     <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/picturefill.min.js" type="text/javascript"></script>
   </body>
 </html>

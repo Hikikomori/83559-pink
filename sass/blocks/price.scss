@@ -122,12 +122,13 @@
 
 .price__item-select {
   background-color: #bec2c7;
-  border: 3px solid #f2f2f2;
   border-radius: 50%;
   box-sizing: content-box;
+  display: inline-block;
   height: 6px;
   margin: 0 5px 0 4px;
   padding: 0;
+  vertical-align: middle;
   width: 6px;
 
   &:hover {
@@ -140,7 +141,7 @@
 
   &--active {
     background-color: #fff;
-    border-color: $darkblue;
+    border: 3px solid $darkblue;
 
     &:hover {
       background-color: #fff;
