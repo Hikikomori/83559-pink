@@ -109,6 +109,7 @@
   color:$darkblue;
   height: 63px;
   min-width: 236px;
+  outline: 0;
   padding: 0 20px;
   width: 100%;
 
@@ -208,6 +209,7 @@
   min-height: 169px;
   min-width: 240px;
   max-height: 169px;
+  outline: 0;
   padding: 14px 18px;
   resize: none;
   width: calc(100% - 40px);
@@ -277,7 +279,7 @@
 }
 
 @media (min-width: 700px) {
-  .contest-wrap {
+  .contest__wrap {
     @include no-indents;
   }
 
@@ -467,7 +469,7 @@
 }
 
 @media (min-width: 1200px) {
-  .contest-wrap {
+  .contest__wrap {
     @include deksktop-centerer;
   }
 

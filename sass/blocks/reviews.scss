@@ -82,7 +82,7 @@
     padding-top: 8px;
   }
 
-  .reviews-wrap {
+  .reviews__wrap {
     @include no-indents;
   }
 
@@ -117,7 +117,7 @@
     padding: 168px 130px 28px 130px;
   }
 
-  .reviews-wrap {
+  .reviews__wrap {
     @include deksktop-centerer-narrow;
     align-items: flex-start;
     display: flex;
