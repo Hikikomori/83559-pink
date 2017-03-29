@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 700px) {
-  .user-photos-wrap {
+  .user-photos__wrap {
     @include no-indents;
   }
 
@@ -36,7 +36,7 @@
 }
 
 @media (min-width: 1200px) {
-  .user-photos-wrap {
+  .user-photos__wrap {
     @include deksktop-centerer;
   }
 
