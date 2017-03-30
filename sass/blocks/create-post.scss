@@ -147,7 +147,7 @@
 
 
 @media (min-width: 700px) {
-  .create-post-wrap {
+  .create-post__wrap {
     @include no-indents;
   }
 
@@ -273,7 +273,7 @@
 }
 
 @media (min-width: 1200px) {
-  .create-post-wrap {
+  .create-post__wrap {
     @include deksktop-centerer-narrow;
   }
 

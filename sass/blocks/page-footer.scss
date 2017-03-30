@@ -179,7 +179,7 @@
     }
   }
 
-  .page-footer-wrap,
+  .page-footer__wrap,
   .page-footer__bottom-wrap {
     align-items: flex-start;
     display: flex;
@@ -280,7 +280,7 @@
     }
   }
 
-  .page-footer-wrap {
+  .page-footer__wrap {
     @include deksktop-centerer-narrow;
     padding: 0;
   }
