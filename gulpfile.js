@@ -14,7 +14,7 @@ var htmlmin = require('gulp-html-minifier');
 var del = require("del");
 var server = require("browser-sync").create();
 
-gulp.task("style", function() {
+gulp.task("style", ["copy"], function() {
   return gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -28,6 +28,22 @@ gulp.task("style", function() {
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minifycss())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"));
+});
+
+gulp.task("styledev", function() {
+  return gulp.src("sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer({browsers: [
+        "last 2 versions"
+      ]}),
+      mqpacker({
+        sort: true
+      })
+    ]))
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -43,7 +59,7 @@ gulp.task("html:update", ["html:copy"], function(done) {
   done();
 });
 
-gulp.task("serve", function() {
+gulp.task("server", function() {
   server.init({
     server: "build/",
     notify: true,
@@ -52,7 +68,7 @@ gulp.task("serve", function() {
     ui: false
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("sass/**/*.{scss,sass}", ["styledev"]);
   gulp.watch("*.html", ["html:update"]);
 });
 
@@ -63,8 +79,8 @@ gulp.task("clean", function() {
 gulp.task("copy",["clean"], function() {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "js/**",
+    "img/**/*.{png,jpg,svg}",
+    "js/**/*.js",
     "*.html"
   ], {
     base: "."
@@ -100,7 +116,7 @@ gulp.task("minijs", function() {
 });
 
 
-gulp.task("minify", ["copy"], function() {
+gulp.task("minify", ["style"], function() {
   gulp.run(
     "miniimages",
     "minihtml",
