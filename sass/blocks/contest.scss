@@ -346,6 +346,7 @@
       .contest__fieldset-heading {
         display: inline-block;
         margin-bottom: 26px;
+        vertical-align: top;
       }
 
       .contest__input-label-pair {
@@ -386,6 +387,7 @@
     display: inline-block;
     padding: 0 25px;
     position: relative;
+    vertical-align: top;
   }
 
   .contest__input-label-pair {
